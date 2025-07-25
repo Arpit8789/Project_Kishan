@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { 
   MagnifyingGlassIcon, 
   MapPinIcon,
-  TrendingUpIcon,
-  TrendingDownIcon,
+  ArrowTrendingUpIcon,
+  ArrowTrendingDownIcon,
   ClockIcon,
   ChartBarIcon
 } from '@heroicons/react/24/outline';
@@ -122,7 +122,7 @@ const PriceTracker = ({ isWidget = false }) => {
                   <div className={`text-sm flex items-center ${
                     price.change >= 0 ? 'text-green-600' : 'text-red-600'
                   }`}>
-                    {price.change >= 0 ? <TrendingUpIcon className="h-3 w-3 mr-1" /> : <TrendingDownIcon className="h-3 w-3 mr-1" />}
+                    {price.change >= 0 ? <ArrowTrendingUpIcon className="h-3 w-3 mr-1" /> : <ArrowTrendingDownIcon className="h-3 w-3 mr-1" />}
                     {Math.abs(price.change)}%
                   </div>
                 </div>
@@ -289,7 +289,7 @@ const PriceTracker = ({ isWidget = false }) => {
                         <div className={`text-sm font-medium flex items-center mt-1 ${
                           price.change >= 0 ? 'text-green-600' : 'text-red-600'
                         }`}>
-                          {price.change >= 0 ? <TrendingUpIcon className="h-4 w-4 mr-1" /> : <TrendingDownIcon className="h-4 w-4 mr-1" />}
+                          {price.change >= 0 ? <ArrowTrendingUpIcon className="h-4 w-4 mr-1" /> : <ArrowTrendingDownIcon className="h-4 w-4 mr-1" />}
                           {Math.abs(price.change)}% from yesterday
                         </div>
                       </div>
